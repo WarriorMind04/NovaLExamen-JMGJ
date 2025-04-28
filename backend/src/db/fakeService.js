@@ -31,7 +31,7 @@ class FakeService extends DBService {
     });
   }
 
-  async findStudentByUsernameAndPassword(username, password) {
+  async login(username, password) {
     const student = this.students.get(username);
     if (student && student.password === password) {
       return student;
